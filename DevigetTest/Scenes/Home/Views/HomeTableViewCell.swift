@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol PostDismissable: AnyObject {
+    func postDismissed(at index: IndexPath)
+}
+
 class HomeTableViewCell: UITableViewCell {
     
+    weak var delegate: PostDismissable?
+    var indexPath: IndexPath?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -27,5 +33,6 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     @IBAction func dismissButtonPressed(_ sender: Any) {
+        delegate?.postDismissed(at: indexPath ?? IndexPath(row: 0, section: 0))
     }
 }

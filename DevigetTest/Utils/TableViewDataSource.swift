@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewDataSource<Cell: UITableViewCell, ViewModel> : NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    typealias TableViewDataSourceCellConfigurationBlock = (Cell, ViewModel) -> ()
+    typealias TableViewDataSourceCellConfigurationBlock = (Cell, ViewModel, IndexPath) -> ()
     typealias TableViewDataSourceCellSelectorHandler = (ViewModel) -> ()
     
     // MARK: - Internal Properties
@@ -41,7 +41,7 @@ class TableViewDataSource<Cell: UITableViewCell, ViewModel> : NSObject, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! Cell
         let item = items[indexPath.row]
-        self.cellConfigurationBlock(cell, item)
+        self.cellConfigurationBlock(cell, item, indexPath)
         return cell
     }
     

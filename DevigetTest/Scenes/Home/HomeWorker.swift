@@ -10,9 +10,16 @@ import UIKit
 
 class HomeWorker {
   
+    private struct Constants {
+        static let categoriesFileName = "posts.json"
+    }
+    
     func fetchPosts(completion: @escaping(RedditResponse?) -> Void) {
         NetworkManager.shared.getRedditPosts { (redditResponse) in
-            completion(redditResponse ?? nil)
+            if redditResponse != nil {
+                Storage.store(redditResponse, to: .caches, as: Constants.categoriesFileName)
+                completion(redditResponse ?? nil)
+            }
         }
     }
 }

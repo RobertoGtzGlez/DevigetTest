@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CuG-vn-6kd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Deviget Test-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="DevigetTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="8rM-ce-cpC">
-                                                    <rect key="frame" x="14" y="14" width="60" height="58"/>
+                                                    <rect key="frame" x="14" y="14" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="nmz-HN-on6"/>
                                                         <constraint firstAttribute="height" constant="60" id="uRC-Dn-Ofb"/>
@@ -84,7 +84,6 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="JTD-Cr-xYf" firstAttribute="top" secondItem="8rM-ce-cpC" secondAttribute="bottom" constant="6" id="43m-dy-OY0"/>
                                                 <constraint firstItem="8rM-ce-cpC" firstAttribute="leading" secondItem="3KX-oM-FQJ" secondAttribute="leading" constant="14" id="8HS-IR-aUv"/>
                                                 <constraint firstItem="8rM-ce-cpC" firstAttribute="top" secondItem="3KX-oM-FQJ" secondAttribute="top" constant="14" id="8Xc-IU-fO3"/>
                                                 <constraint firstItem="ion-oI-wYU" firstAttribute="top" secondItem="StU-S3-kyC" secondAttribute="bottom" constant="5" id="9rW-B1-qpM"/>
@@ -99,6 +98,7 @@
                                                 <constraint firstItem="StU-S3-kyC" firstAttribute="leading" secondItem="8rM-ce-cpC" secondAttribute="trailing" constant="8" id="ngX-7B-L3l"/>
                                                 <constraint firstItem="cZ7-Og-mPX" firstAttribute="top" secondItem="ion-oI-wYU" secondAttribute="bottom" constant="6" id="pJy-vT-G1X"/>
                                                 <constraint firstItem="ion-oI-wYU" firstAttribute="leading" secondItem="8rM-ce-cpC" secondAttribute="trailing" constant="8" id="soT-zE-hKX"/>
+                                                <constraint firstItem="NqG-G3-lmS" firstAttribute="top" secondItem="cZ7-Og-mPX" secondAttribute="bottom" constant="6" id="syf-8D-qim"/>
                                                 <constraint firstItem="ion-oI-wYU" firstAttribute="trailing" secondItem="3KX-oM-FQJ" secondAttribute="trailingMargin" id="x2p-zC-R7o"/>
                                                 <constraint firstItem="cZ7-Og-mPX" firstAttribute="trailing" secondItem="3KX-oM-FQJ" secondAttribute="trailingMargin" id="zrJ-Nm-91W"/>
                                             </constraints>
@@ -123,11 +123,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Deviget Test" id="LNx-mt-naw"/>
                     <connections>
                         <outlet property="tableView" destination="bBh-qB-HC2" id="2qt-Zs-P34"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="120.53571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zkH-JH-ODk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CuG-vn-6kd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cue-Gt-hMX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ogd-RS-d02"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKP-O7-euz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </scene>

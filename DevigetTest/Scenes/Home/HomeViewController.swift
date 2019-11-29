@@ -65,7 +65,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     private func setupTableView() {
         guard let posts = redditPosts else { return }
-        self.tableViewHandler = TableViewDataSource<HomeTableViewCell, Post>(Constants.cellIdentifier, posts, cellConfigurationBlock: { (cell, post) in
+        self.tableViewHandler = TableViewDataSource<HomeTableViewCell, Post>(Constants.cellIdentifier, posts, cellConfigurationBlock: { (cell, post, index) in
             
             cell.titleLabel.text = post.data?.title
             cell.authorLabel.text = post.data?.author
@@ -74,6 +74,8 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
             cell.dateLabel.text = date.timeAgoSinceDate()
             cell.commentsLabel.text = "\(String(describing: post.data?.numComments ?? 0)) comments"
             cell.postImage.cacheImage(urlString: post.data?.thumbnail ?? "")
+            cell.indexPath = index
+            cell.delegate = self
             
         }, cellSelectorHandler: { (post) in
             
@@ -81,4 +83,13 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         self.tableView.dataSource = tableViewHandler
         self.tableView.delegate = tableViewHandler
     }
+}
+
+extension HomeViewController: PostDismissable {
+    func postDismissed(at index: IndexPath) {
+        redditPosts?.remove(at: index.row)
+        setupTableView()
+        tableView.reloadData()
+    }
+
 }
