@@ -77,8 +77,8 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
             cell.indexPath = index
             cell.delegate = self
             
-        }, cellSelectorHandler: { (post) in
-            
+        }, cellSelectorHandler: { [weak self] (post) in
+            self?.router?.routeToDetailView(post)
         })
         self.tableView.dataSource = tableViewHandler
         self.tableView.delegate = tableViewHandler

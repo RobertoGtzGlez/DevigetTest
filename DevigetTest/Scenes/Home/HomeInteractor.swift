@@ -13,14 +13,13 @@ protocol HomeBusinessLogic {
 }
 
 protocol HomeDataStore {
-    //var name: String { get set }
+    var post: Post? { get set }
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
-  
+    var post: Post?
     var presenter: HomePresentationLogic?
     var worker: HomeWorker?
-    //var name: String = ""
   
     func loadData(request: Home.Load.Request) {
     

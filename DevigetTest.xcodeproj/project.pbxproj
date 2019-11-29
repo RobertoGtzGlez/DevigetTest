@@ -25,6 +25,11 @@
 		5C5370C12390FDCC00F66E2C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370C02390FDCC00F66E2C /* HomeTableViewCell.swift */; };
 		5C5370C3239105CF00F66E2C /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370C2239105CF00F66E2C /* Date+extension.swift */; };
 		5C5370C5239107D100F66E2C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370C4239107D100F66E2C /* Storage.swift */; };
+		5C5370CD2391115000F66E2C /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370C72391115000F66E2C /* DetailPresenter.swift */; };
+		5C5370CF2391115000F66E2C /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370C92391115000F66E2C /* DetailRouter.swift */; };
+		5C5370D02391115000F66E2C /* DetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370CA2391115000F66E2C /* DetailModels.swift */; };
+		5C5370D12391115000F66E2C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370CB2391115000F66E2C /* DetailViewController.swift */; };
+		5C5370D22391115000F66E2C /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370CC2391115000F66E2C /* DetailInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		5C5370C02390FDCC00F66E2C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		5C5370C2239105CF00F66E2C /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		5C5370C4239107D100F66E2C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		5C5370C72391115000F66E2C /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		5C5370C92391115000F66E2C /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		5C5370CA2391115000F66E2C /* DetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModels.swift; sourceTree = "<group>"; };
+		5C5370CB2391115000F66E2C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5C5370CC2391115000F66E2C /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				5C5370AD2390F35900F66E2C /* Home */,
+				5C5370C62391113700F66E2C /* Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -149,6 +160,18 @@
 				5C5370C02390FDCC00F66E2C /* HomeTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5C5370C62391113700F66E2C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5C5370C72391115000F66E2C /* DetailPresenter.swift */,
+				5C5370C92391115000F66E2C /* DetailRouter.swift */,
+				5C5370CA2391115000F66E2C /* DetailModels.swift */,
+				5C5370CB2391115000F66E2C /* DetailViewController.swift */,
+				5C5370CC2391115000F66E2C /* DetailInteractor.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,13 +252,18 @@
 				5C5370BE2390FB1100F66E2C /* UIImage+extension.swift in Sources */,
 				5C5370B52390F37C00F66E2C /* HomeWorker.swift in Sources */,
 				5C5370932390E4C800F66E2C /* AppDelegate.swift in Sources */,
+				5C5370D12391115000F66E2C /* DetailViewController.swift in Sources */,
 				5C5370AB2390E65F00F66E2C /* NetworkManager.swift in Sources */,
 				5C5370B82390F37C00F66E2C /* HomeViewController.swift in Sources */,
 				5C5370B42390F37C00F66E2C /* HomePresenter.swift in Sources */,
 				5C5370B62390F37C00F66E2C /* HomeRouter.swift in Sources */,
+				5C5370D02391115000F66E2C /* DetailModels.swift in Sources */,
+				5C5370CD2391115000F66E2C /* DetailPresenter.swift in Sources */,
 				5C5370A82390E54300F66E2C /* RedditResponse.swift in Sources */,
 				5C5370952390E4C800F66E2C /* SceneDelegate.swift in Sources */,
 				5C5370C3239105CF00F66E2C /* Date+extension.swift in Sources */,
+				5C5370CF2391115000F66E2C /* DetailRouter.swift in Sources */,
+				5C5370D22391115000F66E2C /* DetailInteractor.swift in Sources */,
 				5C5370C5239107D100F66E2C /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

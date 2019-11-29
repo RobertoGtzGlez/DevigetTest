@@ -8,8 +8,8 @@
 
 import UIKit
 
-@objc protocol HomeRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+protocol HomeRoutingLogic {
+    func routeToDetailView(_ post: Post)
 }
 
 protocol HomeDataPassing {
@@ -17,38 +17,29 @@ protocol HomeDataPassing {
 }
 
 class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
-  
+    
     weak var viewController: HomeViewController?
     var dataStore: HomeDataStore?
-  
-  
-//    // MARK: Routing
-//  
-//    func routeToSomewhere(segue: UIStoryboardSegue?) {
-//        if let segue = segue {
-//            let destinationVC = segue.destination as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//        } else {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-//            var destinationDS = destinationVC.router!.dataStore!
-//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//            navigateToSomewhere(source: viewController!, destination: destinationVC)
-//        }
-//    }
-//
-//    // MARK: Navigation
-//  
-//  
-//    func navigateToSomewhere(source: HomeViewController, destination: SomewhereViewController) {
-//        source.show(destination, sender: nil)
-//    }
-//  
-//    // MARK: Passing data
-//  
-//    func passDataToSomewhere(source: HomeDataStore, destination: inout SomewhereDataStore) {
-//        
-//        destination.name = source.name
-//    }
+    
+    func routeToDetailView(_ post: Post) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        dataStore?.post = post
+        passDataToComments(source: dataStore!, destination: &destinationDS)
+        navigateToComments(source: viewController!, destination: destinationVC)
+    }
+    
+    // MARK: Navigation
+    func navigateToComments(source: HomeViewController, destination: DetailViewController) {
+        source.show(destination, sender: nil)
+    }
+    
+    // MARK: Passing data
+    
+    func passDataToComments(source: HomeDataStore, destination: inout DetailDataStore) {
+        destination.post = source.post
+    }
 }
+
+
