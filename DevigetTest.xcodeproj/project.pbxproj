@@ -13,6 +13,8 @@
 		5C53709A2390E4C800F66E2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C5370982390E4C800F66E2C /* Main.storyboard */; };
 		5C53709C2390E4C900F66E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C53709B2390E4C900F66E2C /* Assets.xcassets */; };
 		5C53709F2390E4C900F66E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C53709D2390E4C900F66E2C /* LaunchScreen.storyboard */; };
+		5C5370A82390E54300F66E2C /* RedditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370A72390E54300F66E2C /* RedditResponse.swift */; };
+		5C5370AB2390E65F00F66E2C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370AA2390E65F00F66E2C /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5C53709B2390E4C900F66E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C53709E2390E4C900F66E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C5370A02390E4C900F66E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C5370A72390E54300F66E2C /* RedditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditResponse.swift; sourceTree = "<group>"; };
+		5C5370AA2390E65F00F66E2C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		5C5370912390E4C700F66E2C /* DevigetTest */ = {
 			isa = PBXGroup;
 			children = (
+				5C5370A62390E4D800F66E2C /* Models */,
+				5C5370A92390E64800F66E2C /* Network */,
 				5C5370922390E4C800F66E2C /* AppDelegate.swift */,
 				5C5370942390E4C800F66E2C /* SceneDelegate.swift */,
 				5C5370962390E4C800F66E2C /* ViewController.swift */,
@@ -65,6 +71,22 @@
 				5C5370A02390E4C900F66E2C /* Info.plist */,
 			);
 			path = DevigetTest;
+			sourceTree = "<group>";
+		};
+		5C5370A62390E4D800F66E2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C5370A72390E54300F66E2C /* RedditResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C5370A92390E64800F66E2C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5C5370AA2390E65F00F66E2C /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +162,8 @@
 			files = (
 				5C5370972390E4C800F66E2C /* ViewController.swift in Sources */,
 				5C5370932390E4C800F66E2C /* AppDelegate.swift in Sources */,
+				5C5370AB2390E65F00F66E2C /* NetworkManager.swift in Sources */,
+				5C5370A82390E54300F66E2C /* RedditResponse.swift in Sources */,
 				5C5370952390E4C800F66E2C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
