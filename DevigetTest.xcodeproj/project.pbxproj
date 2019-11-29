@@ -22,6 +22,8 @@
 		5C5370B92390F37C00F66E2C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370B32390F37C00F66E2C /* HomeInteractor.swift */; };
 		5C5370BC2390FA5C00F66E2C /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370BB2390FA5C00F66E2C /* TableViewDataSource.swift */; };
 		5C5370BE2390FB1100F66E2C /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370BD2390FB1100F66E2C /* UIImage+extension.swift */; };
+		5C5370C12390FDCC00F66E2C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370C02390FDCC00F66E2C /* HomeTableViewCell.swift */; };
+		5C5370C3239105CF00F66E2C /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370C2239105CF00F66E2C /* Date+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		5C5370B32390F37C00F66E2C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		5C5370BB2390FA5C00F66E2C /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		5C5370BD2390FB1100F66E2C /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		5C5370C02390FDCC00F66E2C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		5C5370C2239105CF00F66E2C /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		5C5370AD2390F35900F66E2C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5C5370BF2390FD9C00F66E2C /* Views */,
 				5C5370AE2390F37C00F66E2C /* HomePresenter.swift */,
 				5C5370AF2390F37C00F66E2C /* HomeWorker.swift */,
 				5C5370B02390F37C00F66E2C /* HomeRouter.swift */,
@@ -130,8 +135,17 @@
 			children = (
 				5C5370BB2390FA5C00F66E2C /* TableViewDataSource.swift */,
 				5C5370BD2390FB1100F66E2C /* UIImage+extension.swift */,
+				5C5370C2239105CF00F66E2C /* Date+extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		5C5370BF2390FD9C00F66E2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C5370C02390FDCC00F66E2C /* HomeTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +221,7 @@
 			files = (
 				5C5370B92390F37C00F66E2C /* HomeInteractor.swift in Sources */,
 				5C5370BC2390FA5C00F66E2C /* TableViewDataSource.swift in Sources */,
+				5C5370C12390FDCC00F66E2C /* HomeTableViewCell.swift in Sources */,
 				5C5370B72390F37C00F66E2C /* HomeModels.swift in Sources */,
 				5C5370BE2390FB1100F66E2C /* UIImage+extension.swift in Sources */,
 				5C5370B52390F37C00F66E2C /* HomeWorker.swift in Sources */,
@@ -217,6 +232,7 @@
 				5C5370B62390F37C00F66E2C /* HomeRouter.swift in Sources */,
 				5C5370A82390E54300F66E2C /* RedditResponse.swift in Sources */,
 				5C5370952390E4C800F66E2C /* SceneDelegate.swift in Sources */,
+				5C5370C3239105CF00F66E2C /* Date+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

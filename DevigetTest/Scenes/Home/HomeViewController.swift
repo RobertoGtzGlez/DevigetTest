@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     // MARK:- IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
-    private var tableViewHandler: TableViewDataSource<UITableViewCell, Post>?
+    private var tableViewHandler: TableViewDataSource<HomeTableViewCell, Post>?
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
     private(set) var redditPosts: [Post]?
@@ -65,9 +65,15 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     private func setupTableView() {
         guard let posts = redditPosts else { return }
-        self.tableViewHandler = TableViewDataSource<UITableViewCell, Post>(Constants.cellIdentifier, posts, cellConfigurationBlock: { (cell, post) in
+        self.tableViewHandler = TableViewDataSource<HomeTableViewCell, Post>(Constants.cellIdentifier, posts, cellConfigurationBlock: { (cell, post) in
             
-            cell.textLabel?.text = post.data?.title
+            cell.titleLabel.text = post.data?.title
+            cell.authorLabel.text = post.data?.author
+            let timeStamp = Double(post.data?.created ?? 0)
+            let date = Date(timeIntervalSince1970: timeStamp)
+            cell.dateLabel.text = date.timeAgoSinceDate()
+            cell.commentsLabel.text = "\(String(describing: post.data?.numComments ?? 0)) comments"
+            cell.postImage.cacheImage(urlString: post.data?.thumbnail ?? "")
             
         }, cellSelectorHandler: { (post) in
             
