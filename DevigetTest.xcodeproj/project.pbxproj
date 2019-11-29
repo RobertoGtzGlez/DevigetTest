@@ -20,6 +20,8 @@
 		5C5370B72390F37C00F66E2C /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370B12390F37C00F66E2C /* HomeModels.swift */; };
 		5C5370B82390F37C00F66E2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370B22390F37C00F66E2C /* HomeViewController.swift */; };
 		5C5370B92390F37C00F66E2C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370B32390F37C00F66E2C /* HomeInteractor.swift */; };
+		5C5370BC2390FA5C00F66E2C /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370BB2390FA5C00F66E2C /* TableViewDataSource.swift */; };
+		5C5370BE2390FB1100F66E2C /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370BD2390FB1100F66E2C /* UIImage+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		5C5370B12390F37C00F66E2C /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		5C5370B22390F37C00F66E2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5C5370B32390F37C00F66E2C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		5C5370BB2390FA5C00F66E2C /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		5C5370BD2390FB1100F66E2C /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 				5C53709B2390E4C900F66E2C /* Assets.xcassets */,
 				5C53709D2390E4C900F66E2C /* LaunchScreen.storyboard */,
 				5C5370A02390E4C900F66E2C /* Info.plist */,
+				5C5370BA2390FA4100F66E2C /* Utils */,
 			);
 			path = DevigetTest;
 			sourceTree = "<group>";
@@ -118,6 +123,15 @@
 				5C5370B32390F37C00F66E2C /* HomeInteractor.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5C5370BA2390FA4100F66E2C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5C5370BB2390FA5C00F66E2C /* TableViewDataSource.swift */,
+				5C5370BD2390FB1100F66E2C /* UIImage+extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +206,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C5370B92390F37C00F66E2C /* HomeInteractor.swift in Sources */,
+				5C5370BC2390FA5C00F66E2C /* TableViewDataSource.swift in Sources */,
 				5C5370B72390F37C00F66E2C /* HomeModels.swift in Sources */,
+				5C5370BE2390FB1100F66E2C /* UIImage+extension.swift in Sources */,
 				5C5370B52390F37C00F66E2C /* HomeWorker.swift in Sources */,
 				5C5370932390E4C800F66E2C /* AppDelegate.swift in Sources */,
 				5C5370AB2390E65F00F66E2C /* NetworkManager.swift in Sources */,

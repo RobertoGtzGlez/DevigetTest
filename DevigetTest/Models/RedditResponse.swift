@@ -18,11 +18,11 @@ struct RedditResponse: Codable {
 struct RedditResponseData: Codable {
     let modhash: String?
     let dist: Int?
-    let children: [Posts]?
+    let children: [Post]?
 }
 
 // MARK: - Child
-struct Posts: Codable {
+struct Post: Codable {
     let kind: String?
     let data: ChildData?
 }

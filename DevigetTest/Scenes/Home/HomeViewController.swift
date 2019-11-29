@@ -13,10 +13,19 @@ protocol HomeDisplayLogic: class {
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
-  
+    
+    // MARK:- IBOutlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var tableViewHandler: TableViewDataSource<UITableViewCell, Post>?
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
-    private(set) var redditPosts: [Posts]?
+    private(set) var redditPosts: [Post]?
+    
+    // MARK:- Constants
+    private struct Constants {
+        static let cellIdentifier = "Cell"
+    }
   
     // MARK: Setup
   
@@ -48,5 +57,22 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
   
     func displayData(viewModel: Home.Load.ViewModel) {
         redditPosts = viewModel.redditPosts.data?.children
+        DispatchQueue.main.async {
+            self.setupTableView()
+            self.tableView.reloadData()
+        }
+    }
+    
+    private func setupTableView() {
+        guard let posts = redditPosts else { return }
+        self.tableViewHandler = TableViewDataSource<UITableViewCell, Post>(Constants.cellIdentifier, posts, cellConfigurationBlock: { (cell, post) in
+            
+            cell.textLabel?.text = post.data?.title
+            
+        }, cellSelectorHandler: { (post) in
+            
+        })
+        self.tableView.dataSource = tableViewHandler
+        self.tableView.delegate = tableViewHandler
     }
 }
