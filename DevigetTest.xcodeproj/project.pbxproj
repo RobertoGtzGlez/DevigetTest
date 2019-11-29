@@ -9,25 +9,35 @@
 /* Begin PBXBuildFile section */
 		5C5370932390E4C800F66E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370922390E4C800F66E2C /* AppDelegate.swift */; };
 		5C5370952390E4C800F66E2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370942390E4C800F66E2C /* SceneDelegate.swift */; };
-		5C5370972390E4C800F66E2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370962390E4C800F66E2C /* ViewController.swift */; };
 		5C53709A2390E4C800F66E2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C5370982390E4C800F66E2C /* Main.storyboard */; };
 		5C53709C2390E4C900F66E2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C53709B2390E4C900F66E2C /* Assets.xcassets */; };
 		5C53709F2390E4C900F66E2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C53709D2390E4C900F66E2C /* LaunchScreen.storyboard */; };
 		5C5370A82390E54300F66E2C /* RedditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370A72390E54300F66E2C /* RedditResponse.swift */; };
 		5C5370AB2390E65F00F66E2C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370AA2390E65F00F66E2C /* NetworkManager.swift */; };
+		5C5370B42390F37C00F66E2C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370AE2390F37C00F66E2C /* HomePresenter.swift */; };
+		5C5370B52390F37C00F66E2C /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370AF2390F37C00F66E2C /* HomeWorker.swift */; };
+		5C5370B62390F37C00F66E2C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370B02390F37C00F66E2C /* HomeRouter.swift */; };
+		5C5370B72390F37C00F66E2C /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370B12390F37C00F66E2C /* HomeModels.swift */; };
+		5C5370B82390F37C00F66E2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370B22390F37C00F66E2C /* HomeViewController.swift */; };
+		5C5370B92390F37C00F66E2C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5370B32390F37C00F66E2C /* HomeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C53708F2390E4C700F66E2C /* DevigetTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevigetTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5370922390E4C800F66E2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C5370942390E4C800F66E2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C5370962390E4C800F66E2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C5370992390E4C800F66E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C53709B2390E4C900F66E2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C53709E2390E4C900F66E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C5370A02390E4C900F66E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C5370A72390E54300F66E2C /* RedditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditResponse.swift; sourceTree = "<group>"; };
 		5C5370AA2390E65F00F66E2C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5C5370AE2390F37C00F66E2C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		5C5370AF2390F37C00F66E2C /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		5C5370B02390F37C00F66E2C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		5C5370B12390F37C00F66E2C /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		5C5370B22390F37C00F66E2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5C5370B32390F37C00F66E2C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +72,9 @@
 			children = (
 				5C5370A62390E4D800F66E2C /* Models */,
 				5C5370A92390E64800F66E2C /* Network */,
+				5C5370AC2390F34400F66E2C /* Scenes */,
 				5C5370922390E4C800F66E2C /* AppDelegate.swift */,
 				5C5370942390E4C800F66E2C /* SceneDelegate.swift */,
-				5C5370962390E4C800F66E2C /* ViewController.swift */,
 				5C5370982390E4C800F66E2C /* Main.storyboard */,
 				5C53709B2390E4C900F66E2C /* Assets.xcassets */,
 				5C53709D2390E4C900F66E2C /* LaunchScreen.storyboard */,
@@ -87,6 +97,27 @@
 				5C5370AA2390E65F00F66E2C /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		5C5370AC2390F34400F66E2C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5C5370AD2390F35900F66E2C /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5C5370AD2390F35900F66E2C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5C5370AE2390F37C00F66E2C /* HomePresenter.swift */,
+				5C5370AF2390F37C00F66E2C /* HomeWorker.swift */,
+				5C5370B02390F37C00F66E2C /* HomeRouter.swift */,
+				5C5370B12390F37C00F66E2C /* HomeModels.swift */,
+				5C5370B22390F37C00F66E2C /* HomeViewController.swift */,
+				5C5370B32390F37C00F66E2C /* HomeInteractor.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C5370972390E4C800F66E2C /* ViewController.swift in Sources */,
+				5C5370B92390F37C00F66E2C /* HomeInteractor.swift in Sources */,
+				5C5370B72390F37C00F66E2C /* HomeModels.swift in Sources */,
+				5C5370B52390F37C00F66E2C /* HomeWorker.swift in Sources */,
 				5C5370932390E4C800F66E2C /* AppDelegate.swift in Sources */,
 				5C5370AB2390E65F00F66E2C /* NetworkManager.swift in Sources */,
+				5C5370B82390F37C00F66E2C /* HomeViewController.swift in Sources */,
+				5C5370B42390F37C00F66E2C /* HomePresenter.swift in Sources */,
+				5C5370B62390F37C00F66E2C /* HomeRouter.swift in Sources */,
 				5C5370A82390E54300F66E2C /* RedditResponse.swift in Sources */,
 				5C5370952390E4C800F66E2C /* SceneDelegate.swift in Sources */,
 			);
